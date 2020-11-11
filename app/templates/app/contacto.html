@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+</head>
+<body>
+     <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top barra ">
+            <a class="navbar-brand " href="{% url 'home' %}">
+                <img src="{% static 'app/img/logoamarillo.png' %}" style="width: 20%"><span class="text-warning">DIGI SmartCash</span></a>
+            </a>
+        <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarNav" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+             <!--Crea boton login con formulario-->
+             <div class="dropdown px-2">
+                <button class="btn  btn-outline-warning  dropdown-toggle" data-toggle="dropdown">Ingresar</button>
+                <div class="dropdown-menu" style="width: 300px;">
+                  <form >
+                  <div class="form-group ">
+                  <label for="exampleInputEmail1">Correo Electronico</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="jean_baselaiz@digi.smartcash.com">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********">
+                  </div>
+                  <!--<button type="submit" class="btn btn-warning" href="/index2.html">Entrar</button>-->
+                  <a class="btn  btn-warning" href="{% url 'profile' %}" target="_self"><i class="fa-send"></i><span class="text">Entrar</span></a>
+                  </form>
+                </div>
+              </div>
+            <li class="nav-item active px-2">
+              <a class="nav-link" href="#info">Informacion</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+      <br><br>
+
+      <br><br>
+    <div class="contenido">
+        <h2>Contacto</h2>
+        <form action=""style="width: 220px; height=300px; margin:50px;" method="POST">
+            {% csrf_token %}
+
+
+            {{ form }}
+            <button type="submit" id="btnEnviar" class="button">Enviar</button>
+            {{mensaje}}
+        </form>
+        
+    </div>
+    
+
+</body>
+</html>

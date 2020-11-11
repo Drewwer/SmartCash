@@ -41,7 +41,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffeb69', end
     text-transform: uppercase;
 }
 
-
+.formulario_contacto{
+  width: 500px;
+  margin-top:50px;
+}
  
 	
 	

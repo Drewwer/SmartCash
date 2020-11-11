@@ -11,4 +11,10 @@ class Transferencia(models.Model):
     def __str__(self):
         return self.nombreDeposita
 
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=50)
+    correo = models.EmailField()
+    mensaje = models.TextField()
 
+    def __str__(self):
+        return self.nombre
