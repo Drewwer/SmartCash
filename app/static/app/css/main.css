@@ -1,0 +1,47 @@
+.barra{
+    background-color: #2a2a2a;
+}
+.nav-link{
+    color: white !important;
+    text-transform: uppercase;
+    font-size: .8rem;
+    
+  }
+  body{
+    font-family: 'Roboto Condensed', sans-serif;
+      
+background: rgba(255,235,105,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(255,235,105,1) 0%, rgba(255,153,0,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,235,105,1)), color-stop(100%, rgba(255,153,0,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,235,105,1) 0%, rgba(255,153,0,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(255,235,105,1) 0%, rgba(255,153,0,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(255,235,105,1) 0%, rgba(255,153,0,1) 100%);
+background: radial-gradient(ellipse at center, rgba(255,235,105,1) 0%, rgba(255,153,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffeb69', endColorstr='#ff9900', GradientType=1 );
+
+  }
+  a{
+    color: #ffc107;
+  }
+  a:hover{
+    color: #ffc107 !important;
+  }
+ 
+  #mision{
+    background-color: #2a2a2a;
+    color:white;
+    text-align: center;
+  }
+ footer{
+     background: url(../img/fondoenviar.jpg); 
+ }
+ 
+.titulos{
+    color: white;
+    text-transform: uppercase;
+}
+
+
+ 
+	
+	

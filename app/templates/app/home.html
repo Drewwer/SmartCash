@@ -3,9 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartCash</title>
+    <title>Digi SmartCash</title>
+    <!--Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--conectando a nuestro Css-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Base del html</h2>
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top barra ">
+            <a class="navbar-brand " href="#carouselExampleSlidesOnly">
+                <img src="{% static 'app/img/logoamarillo.png' %}" style="width: 20%"><span class="text-warning">DIGI SmartCash</span></a>
+            </a>
+        <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarNav" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+             <!--Crea boton login con formulario-->
+             <div class="dropdown px-2">
+                <button class="btn  btn-outline-warning  dropdown-toggle" data-toggle="dropdown">Ingresar</button>
+                <div class="dropdown-menu" style="width: 300px;">
+                  <form >
+                  <div class="form-group ">
+                  <label for="exampleInputEmail1">Correo Electronico</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="jean_baselaiz@digi.smartcash.com">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********">
+                  </div>
+                  <!--<button type="submit" class="btn btn-warning" href="/index2.html">Entrar</button>-->
+                  <a class="btn  btn-warning" href="{% url 'profile' %}" target="_self"><i class="fa-send"></i><span class="text">Entrar</span></a>
+                  </form>
+                </div>
+              </div>
+            <li class="nav-item active px-2">
+              <a class="nav-link" href="#info">Informacion</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--Carrusel-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'app/img/img1.jpg' %}" alt="First slide">
+            <div class="carousel-caption">
+                <h3 class="d-block strong">DIGI SMARTCASH</h3>
+                <p class="lead-d-none d-sm-block ">Tu mejor opcion a la hora de transferir!!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'app/img/img2.jpg' %}" alt="Second slide">
+            <div class="carousel-caption">
+                <h3 class="d-block strong">DIGI SMARTCASH</h3>
+                <p clash="lead-d-none d-sm-block">Tu mejor opcion a la hora de transferir!!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'app/img/img3.jpg' %}" alt="Third slide">
+            <div class="carousel-caption ">
+                <p> - </p>
+                <h3 class="d-block strong">DIGI SMARTCASH</h3>
+                <p clash="lead-d-none d-sm-block  ">Tu mejor opcion a la hora de transferir!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+      <!--mision-->
+      <section id="mision">
+          <div class="container">
+              <p style="opacity: 0;"> - </p>
+            <p class="h3 mb-2 ">
+                Nuestra  objetivo es conectar a todo el mundo de una manera sencilla y rapida, atravez de nuestros servicios de la mas alta calidad !!
+              </p>
+              <p style="opacity: 50%;">- Mision de la Empresa -</p>
+            </div>
+      </section>
+      
+      <!--informacion-->
+      <section id="info">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class=info-left>
+                        <img src="{% static 'app/img/logo3.png' %}" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="col-md-6 my-auto">
+                    <div class="info-right">
+                        <h3>DIGI SMARTCASH</h3>
+                        <p>Historia e Informacion de la Empresa</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsa perferendis, consectetur ipsum rem molestias soluta adipisci quaerat dolor esse magni et tempora suscipit expedita eos repellendus molestiae maiores atque.</p>
+                        <h4>UNETE A DIGI SMARTCASH</h3>
+                        <P>Si deseas ser parte de nuestra empresa, contactate con nosotros atravez de un correo electronico y forma parte de esta gran familia </P>
+                        <a class="btn btn-dark btn-outline-warning  btn-block" href="#contacto" target="_self"><i class="fa-send"></i><span class="text">Enviar Mensaje</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <br>
+    <!--Servicios-->
+      <section id="servicios" style="background: rgb(255, 255, 255, 0.2);">
+        <div class="container">
+            <H2 class="text-center titulos ">SERVICIOS</H2>
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <h2 class="titulos">ENVIO Y RETIRO DE DINERO.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maxime doloremque illo accusamus modi placeat quaerat, totam quisquam cumque veritatis voluptas odit eaque incidunt temporibus. Assumenda iusto aliquid aspernatur velit.</p>
+                    
+                </div>
+                <div class="col-md-6">
+                    <h2 class="titulos">Envio De Encomiendas.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus mollitia eius, dicta corporis enim blanditiis, iste fugit asperiores eum ut perspiciatis expedita error veniam, esse saepe? Eaque, porro minus.</p>
+                </div>
+                <center>
+                    <img src="{% static 'app/img/enviodinero.jpg' %} "style="width: 80%">
+                </center>
+            </div>
+            
+        </div>
+      </section>
+
+      <footer id="contacto">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-5">
+                    <h3 class="titulos my-4 ">Contacto</h3>
+                    <form  class="card my-4">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Correo electronico" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea row="100" cols="100" placeholder="Mensaje" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-warning btn-block">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+          </div>
+      </footer>
+      <br><br>
+      <br><br>
+    
+  
+
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="http://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script></body>
+    <script>window.jQuery || document.write('<script src="http://getbootstrap.com/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 </body>
 </html>
